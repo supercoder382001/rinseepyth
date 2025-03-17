@@ -5,6 +5,4 @@ requests
 supabase
 python-dotenv
 cryptography
-pycrypto
-crypto
-dotenv
+pycryptodome
