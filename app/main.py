@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import addUser, buyPackage, cancelOrder, checkUser, depositTransaction, placeOrder, showOrder, showPackage, showTransaction, updateAddress, userDetails,encryption,decryption
+from app.routers import addUser, buyPackage, cancelOrder, checkUser, depositTransaction, placeOrder, showOrder, showPackage, showTransaction, updateAddress, userDetails, verifyOtp, encryption, decryption
 from app.getDetails import advertisement, allServices, appDetails, availableDates, displayPackages, fetchCoupons, preferences
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,6 +18,7 @@ app.include_router(showPackage.router, prefix="/api", tags=["showPackage"])
 app.include_router(showTransaction.router, prefix="/api", tags=["showTransaction"])
 app.include_router(updateAddress.router, prefix="/api", tags=["updateAddress"])
 app.include_router(userDetails.router, prefix="/api", tags=["userDetails"])
+app.include_router(verifyOtp.router, prefix="/api", tags=["verifyOtp"])
 app.include_router(encryption.router, prefix="/api", tags=["encrypt"])
 app.include_router(decryption.router, prefix="/api", tags=["decrypt"])
 
